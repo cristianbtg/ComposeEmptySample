@@ -59,10 +59,7 @@ fun ChatScreen(modifier: Modifier = Modifier, textFieldState: TextFieldState) {
 
         // Input field at the bottom
         ChatInputField(
-            textFieldState,
-            onSendClick = {
-
-            }
+            textFieldState
         )
     }
 }
@@ -70,7 +67,6 @@ fun ChatScreen(modifier: Modifier = Modifier, textFieldState: TextFieldState) {
 @Composable
 fun ChatInputField(
     textFieldState: TextFieldState,
-    onSendClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -103,9 +99,7 @@ fun ChatInputField(
         // Send button
         Button(
             onClick = {
-                if (textFieldState.text.isNotEmpty()) {
-                    onSendClick()
-                }
+                
             },
             enabled = textFieldState.text.isNotEmpty(),
             shape = RoundedCornerShape(24.dp),
