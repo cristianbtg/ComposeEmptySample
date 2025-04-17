@@ -99,7 +99,7 @@ fun ChatInputField(
         // Send button
         Button(
             onClick = {
-                
+
             },
             enabled = textFieldState.text.isNotEmpty(),
             shape = RoundedCornerShape(24.dp),
